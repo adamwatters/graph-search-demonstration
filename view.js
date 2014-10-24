@@ -71,7 +71,6 @@ Map.prototype = {
 			this.drawLines(this.nodes[i]);
 		}
 		for (var i = 0; i < this.nodes.length; i ++){
-			console.log(this.path);
 			if (this.path.indexOf(self.nodes[i]) !== -1){
 				this.canvasTools.fillStyle = "yellow";
 			} else if (this.edgeMakerShop.indexOf(self.nodes[i]) === -1){
