@@ -7,7 +7,7 @@ cleanEnteredFroms = function (start) {
 		};
 		visitedNodes.push(currentNode);
 
-		currentNode.enteredFrom = null;
+		currentNode.enteredFrom = undefined;
 		
 		for (var i = 0; i < currentNode.edges.length; i+=1){
 			search(currentNode.edges[i]);

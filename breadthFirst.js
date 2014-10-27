@@ -1,6 +1,6 @@
 // takes two node objects with properties contents (num) and edges (an array of node objects)
 // returns the shortest path between the node objects if a solution exists 
-breadthFirstSearch = function (start, goal) {
+var breadthFirstSearch = function (start, goal) {
 
 	// que initialized with start node in it
 	var que = [start];
@@ -48,7 +48,7 @@ breadthFirstSearch = function (start, goal) {
 		// the start node wasn't entered from another node, so it's enteredFrom contents is null
 		// until we reach it, record the contents of the enter-from node to the left-most place in the solution
 		// then move the current node pointer to the node the current node was entered from
-		while (currentNode.enteredFrom != null){
+		while (currentNode.enteredFrom !== undefined){
 			solutionPath.unshift(currentNode.enteredFrom);
 			currentNode = currentNode.enteredFrom;
 		}

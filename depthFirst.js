@@ -1,7 +1,7 @@
 
 // takes two node objects with properties value (num) and edges (an array of node objects)
 // returns a path between the two if such a solution exists, but not neccassarily the shortest one
-depthFirstSearch = function (start, goal) {
+var depthFirstSearch = function (start, goal) {
 
 	var visitedNodes = [];
 	var found = false;
