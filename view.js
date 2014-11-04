@@ -82,22 +82,27 @@ Map.prototype = {
 		for (var i = 0; i < this.nodes.length; i ++){
 			this.drawLines(this.nodes[i]);
 		}
+
+		var textColor;
 		for (var i = 0; i < this.nodes.length; i ++){
 			if (this.path.indexOf(self.nodes[i]) !== -1){
 				this.canvasTools.fillStyle = "yellow";
+				textColor = "black";
 			} else if (this.edgeMakerShop.indexOf(self.nodes[i]) === -1){
 				this.canvasTools.fillStyle = "red";
+				textColor = "white";
 			} else {
 				this.canvasTools.fillStyle = "blue";
+				var textColor = "white";
 			}
 			this.canvasTools.fillRect(self.nodes[i].center.x - NODE_DIMENSION / 2,
 										self.nodes[i].center.y - NODE_DIMENSION / 2,
 										NODE_DIMENSION,
 										NODE_DIMENSION);
-			this.canvasTools.fillStyle = "white";
+			this.canvasTools.fillStyle = textColor;
 			this.canvasTools.font="20px Georgia";
 			this.canvasTools.fillText(self.nodes[i].contents,
-										self.nodes[i].center.x,
+										self.nodes[i].center.x - 6,
 										self.nodes[i].center.y);
 		}
 	},
