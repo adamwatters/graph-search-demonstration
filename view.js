@@ -1,7 +1,5 @@
 var Graph = function() {
 	this.nodes = [];
-
-
 };
 
 var NODE_DIMENSION = 30;
@@ -75,8 +73,9 @@ Map.prototype = {
 	},
 
 	draw: function(self) {
-		this.canvasTools.fillStyle = "#B2B2B2";
-		this.canvasTools.fillRect(0, 0, self.mapSize.height, self.mapSize.width);
+		this.canvasTools.fillStyle = "#C9C9C9";
+		this.canvasTools.fillRect(0, 0, self.mapSize.width, self.mapSize.height);
+		//this.canvasTools.fillRect(0, 0, 600, 800);
 		this.canvasTools.strokeStyle = "black";
 		this.canvasTools.lineWidth=5;
 		for (var i = 0; i < this.nodes.length; i ++){
