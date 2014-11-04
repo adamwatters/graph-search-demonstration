@@ -104,6 +104,7 @@ Map.prototype = {
 										self.nodes[i].center.x - 6,
 										self.nodes[i].center.y);
 		}
+		this.path = [];
 	},
 
 	drawLines: function(node) {
